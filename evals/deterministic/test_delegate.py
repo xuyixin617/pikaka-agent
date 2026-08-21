@@ -66,7 +66,7 @@ def test_delegate_task_invokes_pi_print_mode(tmp_path, monkeypatch):
     assert "Done. Created hello.py." in output and "saved to" in output.lower()
     # the run landed in the dated workspace with a manifest + transcript
     manifests = list((tmp_path / "ws").rglob("MANIFEST.md"))
-    assert len(manifests) == 1 and "create hello.py" in manifests[0].read_text()
+    assert len(manifests) == 1 and "create hello.py" in manifests[0].read_text(encoding="utf-8")
     assert list((tmp_path / "ws").rglob("pi-transcript.log"))
 
 
