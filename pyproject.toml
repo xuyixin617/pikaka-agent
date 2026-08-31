@@ -106,7 +106,7 @@ notion = [
 ]
 # Optional: connect MCP servers (.pikaka/mcp.json)
 mcp = [
-    "mcp>=1.0",
+    "mcp>=1.0,<2.0",
 ]
 dev = [
     "pytest>=8.0",
